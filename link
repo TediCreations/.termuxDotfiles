@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+PROJPATH="$(cd "$(dirname "$0")"; pwd)"
+echo "Linking dotfiles from '${PROJPATH}'"
+
+mkdir -p ${HOME}/.config
+mkdir -p ${HOME}/.local
+mkdir -p ${HOME}/.local/share
+#STOW_FLAGS=--no-folding
+
+for i in $(ls -d "${PROJPATH}"/*/); do
+#for i in $(ls -d */); do
+    package="${i#${PROJPATH}/}"
+    package="${package%/}"
+    echo "Installing '${package}'"
+    stow ${STOW_FLAGS} -d ${PROJPATH} -t ${HOME} -S ${package}
+done
+
+echo "Done"
+exit 0

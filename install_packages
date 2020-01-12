@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+# ------------------------------------------------------------------------------
+# Terminal
+apt-get install -y tmux
+
+# ------------------------------------------------------------------------------
+# System tools
+apt-get install -y stow
+apt-get install -y neofetch
+
+# ------------------------------------------------------------------------------
+# Emacs
+apt-get install -y emacs
+
+# ------------------------------------------------------------------------------
+# Filemanager
+
+# Ranger
+apt-get install -y ranger
+
+# ------------------------------------------------------------------------------
+# Tools
+apt-get install -y wget
+apt-get install -y tree
+apt-get install -y entr
+apt-get install -y sshfs
+apt-get install -y youtube-dl
+apt-get install -y highlight
+apt-get install -y moreutils
+apt-get install -y xclip
+apt-get install -y screen
+apt-get install -y ipython3
+apt-get install -y rlwrap
+apt-get install -y espeak
+apt-get install -y rclone
+
+# ------------------------------------------------------------------------------
+# ZSH
+apt-get install -y zsh
+#chsh -s "$(which zsh)"
+apt-get install -y fonts-powerline
+
+# ------------------------------------------------------------------------------
+# Programmer
+
+# Dev tools
+apt-get install -y exuberant-ctags
+apt-get install -y global
+apt-get install -y doxygen
+apt-get install -y graphviz
+apt-get install -y astyle
+apt-get install -y picocom
+apt-get install -y shellcheck
+apt-get install -y python3-invoke
+
+# GNU Toolchain
+apt-get install -y make
+apt-get install -y automake autoconf libtool
+apt-get install -y build-essential
+apt-get install -y gcc
+apt-get install -y g++
+
+# Git
+apt-get install -y git
+
+# Cmake
+apt-get install -y cmake
+
+# llvm
+apt-get install -y llvm
+
+# clang
+apt-get install -y clang
+apt-get install -y clang-format
+apt-get install -y clang-tidy
+apt-get install -y clang-tools
+apt-get install -y libclang-dev
+
+# Python
+apt-get install -y python3-setuptools
+apt-get install -y python3-pip
+apt-get install -y python3-pygments
+apt-get install -y python3-jedi

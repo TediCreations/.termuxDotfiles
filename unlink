@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+PROJPATH="$(cd "$(dirname "$0")"; pwd)"
+echo "Unlinking dotfiles from '${PROJPATH}'"
+
+for i in $(ls -d "${PROJPATH}"/*/); do
+    package="${i#${PROJPATH}/}"
+    package="${package%/}"
+    echo "Uninstalling '${package}'"
+    stow -d ${PROJPATH} -t ${HOME} -D "${package}"
+done
+
+echo "Done"
+exit 0
